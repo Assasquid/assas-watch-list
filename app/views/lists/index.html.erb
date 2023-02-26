@@ -3,7 +3,7 @@
 <ul>
   <div class="cards">
     <% @lists.each do |list| %>
-      <%= link_to list_path(list), class: "card-category" do %>
+      <%= link_to list_path(list), class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)" do %>
         <li><%= list.name %></li>
       <% end %>
     <% end %>

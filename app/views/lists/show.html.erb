@@ -2,14 +2,17 @@
 <h1><%= @list.name %>:</h1>
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
-  <li><%= bookmark.movie.title %>
-    <p><%= bookmark.comment %></p>
-    <p>
-      <%= link_to "Delete",
-      bookmark_path(bookmark),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-      %>
-    </p>
-  </li>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <li class="card-product-infos"><h2><%= bookmark.movie.title %></h2>
+        <p><%= bookmark.comment %></p>
+        <p>
+          <%= link_to "Delete",
+          bookmark_path(bookmark),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+        </p>
+      </li>
+    </div>
   <% end %>
 </ul>
