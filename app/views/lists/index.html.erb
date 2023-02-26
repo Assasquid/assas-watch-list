@@ -1,7 +1,11 @@
 <p><%= link_to 'Create new list', new_list_path %></p>
 <h1>Movie lists:</h1>
 <ul>
-  <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list), class: "card-category" do %>
+        <li><%= list.name %></li>
+      <% end %>
+    <% end %>
+  </div>
 </ul>

@@ -1,6 +1,7 @@
+<p><%= link_to 'Back to the list', list_path(@list) %></p>
 <h1>Add a new movie to <%= @list.name %>:</h1>
 <%= simple_form_for [@list, @bookmark] do |f| %>
-          <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
-          <%= f.association :movie, prompt: "Select a movie", input_html: {data: { controller: "tom-select"}} %>
-          <%= f.submit 'Add bookmark', class: 'btn btn-primary' %>
-        <% end %>
+  <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
+  <%= f.association :movie, prompt: "Select a movie", input_html: {data: { controller: "tom-select"}} %>
+  <%= f.submit 'Add bookmark', class: 'btn btn-primary' %>
+<% end %>
